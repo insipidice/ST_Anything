@@ -133,7 +133,7 @@ namespace st
 			//	Serial.print("OK,\t");
 			//}
 			m_nHumiditySensorValue = DHT.humidity;
-			m_nTemperatureSensorValue = (DHT.temperature * 1.8) + 32.0;		//Scale from Celsius to Farenheit
+			m_nTemperatureSensorValue = DHT.temperature;		//Scale from Celsius to Farenheit
 			break;
 		case DHTLIB_ERROR_CHECKSUM:
 			if (st::PollingSensor::debug) {
